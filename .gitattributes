@@ -1,0 +1,20 @@
+# Normalize EOL for all files that Git considers text files.
+* text=auto eol=lf
+
+*.gd diff=python
+*.py diff=python
+
+*.md diff=md
+*.txt diff=md
+
+*.c diff=cpp
+*.cpp diff=cpp
+*.h diff=cpp
+*.hpp diff=cpp
+
+*.cs diff=cs
+
+*.res diff=ini
+*.import diff=ini
+*.tscn diff=ini
+*.cfg diff=ini

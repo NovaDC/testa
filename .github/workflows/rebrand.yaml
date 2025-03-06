@@ -1,0 +1,22 @@
+name: Rebrand
+on: push
+jobs:
+  run-python-script:
+    permissions: write-all
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.2.2
+      - name: Set up Python
+        uses: actions/setup-python@v5.4.0
+        with:
+          python-version: '3.12'
+      - name: Install deps
+        run: pip install tqdm
+      - name: Run the script
+        run: python3.12 .github/workflows/rebrand.py -r temp_name=r="${{github.event.repository.name}}" -r temp_version=r="v0.1.0.0" -r temp_desc=r="${{github.event.repository.description}}" -r temp_author=r="${{github.event.repository.owner.login}}" -m -b .git/** -b .github/workflows/**
+      - name: Commit changes
+        uses: actions4git/add-commit-push@v1.0.0
+        with:
+          commit-message: "Rebranded template repo"
+          add-pathspec: ":!.github/workflows/*"

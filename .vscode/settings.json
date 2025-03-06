@@ -1,0 +1,5 @@
+{
+	"cSpell.ignoreRegExpList": ["uid://[a-y0-8]{1,13}"],
+	"cSpell.ignoreRandomStrings": false,
+	"cSpell.overrides": [{"filename": "**/*.gd","languageId": "py"}]
+}
