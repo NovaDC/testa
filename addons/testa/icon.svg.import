@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://addons/temp_name/icon.svg"
+source_file="res://addons/testa/icon.svg"
 dest_files=["res://.godot/imported/icon.svg-0a0351f80735fda474c37021821b0043.ctex"]
 
 [params]
